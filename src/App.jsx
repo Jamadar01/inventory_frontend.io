@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import ProductList from './components/ProductList';
 import ProductForm from './components/ProductForm';
 import QRCodeModal from './components/QRCodeModal';
+import Dashboard from './components/Dashboard';
 import { productService } from './services/api';
 import './App.css';
 
 function App() {
+  const [currentView, setCurrentView] = useState('products'); // 'dashboard' or 'products'
   const [products, setProducts] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
@@ -111,9 +113,27 @@ function App() {
     <div className="App">
       <header className="app-header">
         <h1>Inventory Management System</h1>
-        <button className="btn btn-add" onClick={handleAddNew}>
-          + Add Product
-        </button>
+        <div className="header-actions">
+          <nav className="nav-tabs">
+            <button
+              className={currentView === 'dashboard' ? 'nav-tab active' : 'nav-tab'}
+              onClick={() => setCurrentView('dashboard')}
+            >
+              📊 Dashboard
+            </button>
+            <button
+              className={currentView === 'products' ? 'nav-tab active' : 'nav-tab'}
+              onClick={() => setCurrentView('products')}
+            >
+              📦 Products
+            </button>
+          </nav>
+          {currentView === 'products' && (
+            <button className="btn btn-add" onClick={handleAddNew}>
+              + Add Product
+            </button>
+          )}
+        </div>
       </header>
 
       <main className="app-main">
@@ -123,7 +143,9 @@ function App() {
           </div>
         )}
 
-        {loading ? (
+        {currentView === 'dashboard' ? (
+          <Dashboard />
+        ) : loading ? (
           <div className="loading">Loading...</div>
         ) : (
           <ProductList

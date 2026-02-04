@@ -53,4 +53,12 @@ export const productService = {
   },
 };
 
+export const dashboardService = {
+  // Get dashboard analytics
+  getAnalytics: async () => {
+    const response = await api.get('/dashboard/analytics');
+    return response.data;
+  },
+};
+
 export default api;
