@@ -55,7 +55,6 @@ const Dashboard = () => {
         </button>
       </div>
 
-      {/* Summary Cards */}
       <div className="stats-grid">
         <div className="stat-card">
           <div className="stat-icon" style={{backgroundColor: "#667eea"}}>📦</div>
@@ -106,7 +105,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Charts Section */}
       <div className="charts-grid">
         <div className="chart-card">
           <h3>Stock Status Distribution</h3>
@@ -169,7 +167,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Top Products Tables */}
       <div className="tables-grid">
         <div className="table-card">
           <h3>Top 5 Most Expensive Products</h3>

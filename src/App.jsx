@@ -7,7 +7,7 @@ import { productService } from './services/api';
 import './App.css';
 
 function App() {
-  const [currentView, setCurrentView] = useState('products'); // 'dashboard' or 'products'
+  const [currentView, setCurrentView] = useState('products');
   const [products, setProducts] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
