@@ -88,19 +88,6 @@ Command	Description
 npm run dev	Start development server
 npm run build	Build production bundle
 npm run preview	Preview production build
-📁 Project Structure
-src/
-├── components/
-│   ├── Dashboard.jsx   
-│   ├── ProductList.jsx    
-│   ├── ProductForm.jsx   
-│   └── QRCodeModal.jsx    
-├── services/
-│   └── api.js            
-├── App.jsx               
-├── App.css             
-└── main.jsx               
-
 
 🧪 Feature Details
 Product List
