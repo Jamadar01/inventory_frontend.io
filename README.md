@@ -1,27 +1,22 @@
-# Inventory Management Frontend
 Inventory Management System — Frontend
 
-A React-based single-page application for managing inventory with full CRUD operations, analytics dashboard, and QR code support.
+A modern React-based single-page application for managing inventory with full CRUD operations, analytics dashboard, and QR code integration.
 
 🚀 Live URLs
 
-Frontend (Vercel):
+Frontend (Vercel)
 https://inventory-frontend-io.vercel.app/
 
-Backend API (Railway):
+Backend API (Railway)
 https://inventorybackendio-production.up.railway.app/
 
 ✨ Features
 
-View all products in a responsive table
+View products in a responsive table
 
-Create new products
+Create, update, and delete products
 
-Edit existing products
-
-Delete products with confirmation
-
-Dashboard with inventory analytics
+Inventory analytics dashboard
 
 QR code generation per product
 
@@ -29,7 +24,7 @@ Form validation and error handling
 
 Responsive design (desktop & mobile)
 
-Modern UI with gradient header
+Clean UI with gradient header
 
 🛠 Tech Stack
 
@@ -37,17 +32,17 @@ React 18
 
 Vite
 
-Axios (API calls)
+Axios (API communication)
 
 CSS3 (custom styling, no framework)
 
 📦 Prerequisites
 
-Node.js v14 or higher
+Node.js v14+
 
-Backend API running
+Backend API running (local or deployed)
 
-⚙️ Installation & Setup
+⚙️ Installation & Local Setup
 git clone https://github.com/Jamadar01/inventory_frontend.io.git
 cd inventory_frontend.io
 
@@ -58,18 +53,16 @@ cp .env.example .env
 npm run dev
 
 
-Application runs at:
+Frontend runs at:
 👉 http://localhost:3000
 
 🔐 Environment Variables
 
-Copy .env.example to .env:
+Create a .env file using .env.example.
 
 Variable	Description	Default
 VITE_API_URL	Backend API base URL	http://localhost:8000
-
-For production:
-
+Production Example
 VITE_API_URL=https://inventorybackendio-production.up.railway.app/
 
 ▶️ Running Frontend & Backend Together
@@ -77,14 +70,11 @@ VITE_API_URL=https://inventorybackendio-production.up.railway.app/
 Run both services in separate terminals.
 
 Terminal 1 — Backend
-
 cd inventory_backend.io
 source venv/bin/activate
 uvicorn app.main:app --reload
 
-
 Terminal 2 — Frontend
-
 cd inventory_frontend.io
 npm run dev
 
@@ -94,13 +84,10 @@ Backend: http://localhost:8000
 Frontend: http://localhost:3000
 
 📜 Available Scripts
-
-npm run dev — start development server
-
-npm run build — build for production
-
-npm run preview — preview production build
-
+Command	Description
+npm run dev	Start development server
+npm run build	Build production bundle
+npm run preview	Preview production build
 📁 Project Structure
 src/
 ├── components/
@@ -110,11 +97,11 @@ src/
 │   └── QRCodeModal.jsx    # QR code viewer
 ├── services/
 │   └── api.js             # Axios API service
-├── App.jsx                # Main application component
-├── App.css                # Application styles
+├── App.jsx                # Root component
+├── App.css                # Global styles
 └── main.jsx               # Application entry point
 
-🧪 Features Overview
+🧪 Feature Details
 Product List
 
 Displays all products in a responsive table
@@ -139,15 +126,15 @@ Status (Active / Inactive)
 
 Color-coded status badges
 
-Edit and Delete actions per row
+Edit and Delete actions per product
 
-Empty state when no products exist
+Empty-state UI when no products exist
 
 Product Form
 
 Modal-based create/edit form
 
-Fields:
+Input fields:
 
 Name
 
@@ -169,13 +156,13 @@ Cancel and Save actions
 
 CRUD Operations
 
-Create — Click Add Product button in header
+Create — Click Add Product in the header
 
-Read — Products load automatically on page load
+Read — Products load automatically on app load
 
-Update — Click Edit on any product
+Update — Click Edit on a product row
 
-Delete — Click Delete and confirm action
+Delete — Click Delete and confirm
 
 Dashboard & Analytics
 
@@ -187,7 +174,9 @@ Total inventory quantity
 
 Inventory value
 
-Low stock & out-of-stock counts
+Low-stock items
+
+Out-of-stock items
 
 Category-wise distribution
 
@@ -197,21 +186,21 @@ Top 5 products by quantity
 
 QR Code Integration
 
-Generate QR code for any product
+Generate QR codes for individual products
 
-View and download QR as PNG
+View and download QR code as PNG
 
-QR encodes product ID, name, SKU, and price
+QR encodes product ID, name, SKU, and price as JSON
 
 Uses API Ninjas with automatic fallback to qrserver.com
 
 🚢 Deployment
 
-Live Deployment:
+Live Frontend:
 https://inventory-frontend-io.vercel.app/
 
 Build Command
 npm run build
 
 
-Deploy the generated dist/ folder to any static hosting provider (Vercel, Netlify, GitHub Pages).
+Deploy the generated dist/ folder to any static hosting provider such as Vercel, Netlify, or GitHub Pages.
