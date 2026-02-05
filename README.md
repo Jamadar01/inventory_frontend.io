@@ -91,15 +91,16 @@ npm run preview	Preview production build
 📁 Project Structure
 src/
 ├── components/
-│   ├── Dashboard.jsx      # Analytics dashboard
-│   ├── ProductList.jsx    # Product table
-│   ├── ProductForm.jsx    # Create/Edit modal form
-│   └── QRCodeModal.jsx    # QR code viewer
+│   ├── Dashboard.jsx   
+│   ├── ProductList.jsx    
+│   ├── ProductForm.jsx   
+│   └── QRCodeModal.jsx    
 ├── services/
-│   └── api.js             # Axios API service
-├── App.jsx                # Root component
-├── App.css                # Global styles
-└── main.jsx               # Application entry point
+│   └── api.js            
+├── App.jsx               
+├── App.css             
+└── main.jsx               
+
 
 🧪 Feature Details
 Product List
